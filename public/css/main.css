@@ -1,3 +1,7 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
 h3 {
   margin-left:20px;
 }
@@ -6,13 +10,16 @@ h3 {
   margin-top:100px;
 }
 
+#footer {
+  margin-top:200px;
+}
+
 .messages {
   margin-left:-20px;
-  margin-top:-18px;
+  margin-top:-20px;
 }
 
 .spinner {
-  margin: 100px auto;
   width: 50px;
   height: 30px;
   text-align: center;

@@ -1,0 +1,42 @@
+<html ng-app lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Phone numer validation</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="ng-cloak">
+	
+	<div class="panel callout radius">
+
+		<div class="row"  id="mainArea">
+			<h3>Phone number validation</h3>
+		</div>
+
+		<div class="row" ng-controller="OnTypingValidatorCtrl">
+
+			<div class="large-4 columns">
+				<input id="right-label" input type="tel" ng-model="number" ng-placeholder="Enter the phone number">
+			</div>
+
+			<div class="large-8 columns messages">
+				<div ng-show="isLoading" class="spinner">
+					<div class="rect1"></div>
+					<div class="rect2"></div>
+					<div class="rect3"></div>
+					<div class="rect4"></div>
+					<div class="rect5"></div>
+				</div>
+				<div ng-show="isValidNumber === false" class="alert-box warning" >The number format is invalid, please use the following format: 05xxxxxxxx for cell phones and 0xxxxxxxx for landlines (no need for country code</div>
+				<div ng-show="isValidNumber" class="alert-box success">The number is valid</div>
+				<div ng-show="hasServerError" class="alert-box alert">Server error</div>
+			</div>
+
+		</div>		
+
+		<script src="javascript/onTypingValidatorCtrl.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+	</body>
+	</html>
